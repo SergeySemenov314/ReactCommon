@@ -2,7 +2,7 @@ import React, {useState } from 'react';
 import MyButton from './UI/button/MyButton';
 import MyInput from './UI/input/MyInput';
 
-function PostForm({create}) {
+function PostForm({create, setModal}) {
 
     const [post, setPost] = useState({title:'', body:''});
 
@@ -10,6 +10,7 @@ function PostForm({create}) {
         evt.preventDefault();
         create( {...post, id: Date.now()})
         setPost({title:'', body:''})
+        setModal(false)
     }
 
 
