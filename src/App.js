@@ -1,24 +1,18 @@
 import React from 'react';
-import { BrowserRouter, Link, NavLink, Route, Routes } from 'react-router-dom';
-import About from './pages/About';
-import Posts from './pages/Posts';
+import {
+    BrowserRouter as Router,
+  } from "react-router-dom";
+import Navbar from './components/UI/navbar/Navbar';
 import './styles/App.css';
+import AppRouter from './components/AppRouter';
 
 function App() {
    
     return (
-        <BrowserRouter>
-            <div className="navbar">
-                <div className="navbar__links">
-                    <NavLink to = '/about'>О сайте</NavLink>
-                    <NavLink to = '/posts'>Посты</NavLink>
-                </div>
-            </div>
-            <Routes>     
-                <Route path = '/about' component = {About}/>
-                <Route path = '/posts' component = {Posts}/>
-            </Routes>
-        </BrowserRouter>
+            <Router>
+                <Navbar/>
+                <AppRouter/>
+            </Router>
     )
 }
 

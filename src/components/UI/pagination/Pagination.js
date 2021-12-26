@@ -1,6 +1,5 @@
 import React from 'react';
 import { getPagesArray } from '../../../utils/pages';
-// import classes from './MyInput.module.css'
 
 function Pagination({totalPages, page, changePage}) {
     let pagesArray = getPagesArray(totalPages);
